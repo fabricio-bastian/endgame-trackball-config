@@ -18,7 +18,7 @@
 #define LAYER_USER 5
 
 #define SCROLL_MULTIPLIER 1
-#define SCROLL_DIVISOR 3
+#define SCROLL_DIVISOR 2
 
 #define SNIPE_MULTIPLIER 1
 #define SNIPE_DIVISOR 4
@@ -29,29 +29,29 @@
 
 		default_layer {
 			display-name = "Default";
-			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LC(TAB) LC(LS(TAB))>;
+			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LC(LA(RIGHT)) LC(LA(LEFT))>;
 			bindings = <
-				&ltmkp LAYER_SNIPE ENTER  &ltmkp LAYER_SCROLL ESC
-				&mkp MCLK                 &kp DELETE
-				&mkp LCLK                 &mkp RCLK
+				&kp LGUI                  &ltmkp LAYER_SCROLL ESC
+				&mkp LCLK                 &ltmkp LAYER_SNIPE ENTER
+				&mkp MCLK                 &mkp RCLK
 				&ltm LAYER_EXTRAS MB4     &ltm LAYER_DEVICE MB5
 			>;
 		};
 
 		layer2 {
 			display-name = "Extras";
-			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LC(TAB) LC(LS(TAB))>;
+			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LC(LA(RIGHT)) LC(LA(LEFT))>;
 			bindings = <
 				&kp LC(C)   &kp LC(V)
-				&kp LC(X)   &kp LC(Z)
-				&kp LC(Z)   &kp LC(C)
-				&trans      &kp LC(V)
+				&kp LC(X)   &kp LG(Q)
+				&kp LC(Z)   &kp LG(W)
+				&trans      &kp LC(W)
 			>;
 		};
 
 		layer3 {
 			display-name = "Device";
-			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LC(TAB) LC(LS(TAB))>;
+			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LC(LA(RIGHT)) LC(LA(LEFT))>;
 			bindings = <
 				&rgb_off           &rgb_ug RGB_EFF
 				&bt BT_CLR         &bt BT_NXT
@@ -75,16 +75,16 @@
 			display-name = "Snipe";
 			sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp RIGHT LEFT>;
 			bindings = <
+				&kp LA(F4)       &trans
+				&trans           &trans
 				&trans           &soft_off
-				&trans           &trans
-				&trans           &trans
 				&trans           &trans
 			>;
 		};
 
 		layer6 {
 			display-name = "User";
-			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LC(TAB) LC(LS(TAB))>;
+			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LC(LA(RIGHT)) LC(LA(LEFT))>;
 			bindings = <
 				&trans        &trans
 				&trans        &trans
