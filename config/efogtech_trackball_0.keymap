@@ -213,3 +213,9 @@
 		};
 	};
 };
+
+&zip_2s_mixer {
+	twist-thres = <6>;
+	twist-interference-thres = <300>;
+	twist-interference-window = <96>;
+};

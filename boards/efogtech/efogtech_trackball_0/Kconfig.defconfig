@@ -5,9 +5,6 @@
 
 if BOARD_EFOGTECH_TRBL_52833
 
-config BOARD
-    default "efogtech_trackball_0"
-
 config ZMK_KEYBOARD_NAME
     default "Endgame Trackball"
 

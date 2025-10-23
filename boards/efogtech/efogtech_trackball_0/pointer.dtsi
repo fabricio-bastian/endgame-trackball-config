@@ -9,11 +9,7 @@
 &zip_2s_mixer {
 	status = "okay";
 	sync-report-ms = <1>;
-
 	sync-scroll-report-ms = <8>;
-	twist-thres = <6>; // CPI and sync-scroll-report-ms dependent
-	twist-interference-thres = <300>; // CPI and sync-scroll-report-ms dependent
-	twist-interference-window = <120>; // accumulate history over N ms
 
 	// arbitrary bounding box (0, 0, 0) - (255, 255, 255)
 	ball-radius = <102>; // maximum = 127

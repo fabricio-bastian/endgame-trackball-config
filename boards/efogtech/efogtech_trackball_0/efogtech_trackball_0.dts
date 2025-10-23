@@ -43,6 +43,7 @@
 	keys {
 		compatible = "gpio-keys";
 		wakeup_key: wakeup_key {
+			label = "Wakeup";
 			gpios = <&btns 10 GPIO_ACTIVE_LOW>;
 		};
 	};
