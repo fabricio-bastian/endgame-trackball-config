@@ -27,6 +27,9 @@
 	keymap {
 		compatible = "zmk,keymap";
 
+
+
+
 		default_layer {
 			display-name = "Default";
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LC(TAB) LC(LS(TAB))>;
@@ -40,7 +43,16 @@
 
 		layer2 {
 			display-name = "Extras";
-			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LC(TAB) LC(LS(TAB))>;
+			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LC(TAB) LC(L
+
+
+
+
+
+
+
+
+S(TAB))>;
 			bindings = <
 				&kp LC(C)   &kp LC(V)
 				&kp LC(X)   &kp LC(Z)
@@ -215,6 +227,7 @@
 };
 
 &zip_2s_mixer {
-	twist-interference-thres = <15>;
-	twist-thres = <25>;
+	twist-thres = <6>;
+	twist-interference-thres = <300>;
+	twist-interference-window = <96>;
 };
