@@ -29,7 +29,7 @@
 
 		default_layer {
 			display-name = "Default";
-			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DOWN C_BRI_UP>;
+			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
 			bindings = <
 				&kp LG(TAB)                        &mkp RCLK
 				&ltm LAYER_EXTRAS LC(DOWN_ARROW)   &mkp LCLK
@@ -40,7 +40,7 @@
 
 		layer2 {
 			display-name = "Extras";
-			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DOWN C_BRI_UP>;
+			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
 			bindings = <
 				&kp LG(C)   &kp LG(V)
 				&trans      &kp LG(Z)
@@ -51,7 +51,7 @@
 
 		layer3 {
 			display-name = "Device";
-			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DOWN C_BRI_UP>;
+			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
 			bindings = <
 				&rgb_off           &rgb_ug RGB_EFF
 				&bt BT_CLR         &bt BT_NXT
