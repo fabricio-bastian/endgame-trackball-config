@@ -31,8 +31,8 @@
 			display-name = "Default";
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
 			bindings = <
-				&kp LG(TAB)                        &mkp RCLK
-				&ltm LAYER_EXTRAS LC(DOWN_ARROW)   &mkp LCLK
+				&kp LG(LS(M))                      &mkp RCLK
+				&ltm LAYER_EXTRAS LC(DOWN)         &mkp LCLK
 				&ltmkp LAYER_SCROLL LC(UP_ARROW) 	 &mkp MCLK
 				&ltmkp LAYER_SNIPE MB4             &ltm LAYER_DEVICE MB5
 			>;
