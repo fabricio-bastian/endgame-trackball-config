@@ -96,7 +96,7 @@
 
 	trackball {
     default {
-      layers = <DEFAULT>;
+      layers = <LAYER_DEFAULT>;
       input-processors = <&zip_scroll_scaler 0 1>;
     };
 
