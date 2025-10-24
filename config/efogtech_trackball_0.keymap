@@ -95,11 +95,6 @@
 	};
 
 	trackball {
-    default {
-      layers = <LAYER_DEFAULT>;
-      input-processors = <&zip_scroll_scaler 0 1>;
-    };
-
 		scroll {
 			layers = <LAYER_SCROLL>;
 			input-processors = <&zip_xy_scaler SCROLL_MULTIPLIER SCROLL_DIVISOR>, <&zip_axis_clamper>,
@@ -220,6 +215,6 @@
 };
 
 &zip_2s_mixer {
-	twist-interference-thres = <15>;
-	twist-thres = <25>;
+	twist-interference-thres = <1>;
+	twist-thres = <200>;
 };
