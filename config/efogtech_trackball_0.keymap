@@ -18,7 +18,7 @@
 #define LAYER_USER 5
 
 #define SCROLL_MULTIPLIER 1
-#define SCROLL_DIVISOR 10
+#define SCROLL_DIVISOR 20
 
 #define SNIPE_MULTIPLIER 1
 #define SNIPE_DIVISOR 4
@@ -95,6 +95,11 @@
 	};
 
 	trackball {
+    default {
+      layers = <DEFAULT>;
+      input-processors = <&zip_scroll_scaler 0 1>;
+    };
+
 		scroll {
 			layers = <LAYER_SCROLL>;
 			input-processors = <&zip_xy_scaler SCROLL_MULTIPLIER SCROLL_DIVISOR>, <&zip_axis_clamper>,
