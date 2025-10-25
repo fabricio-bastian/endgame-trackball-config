@@ -20,7 +20,7 @@
 #define SCROLL_MULTIPLIER 1
 #define SCROLL_DIVISOR 40
 #define TWIST_SCROLL_MULTIPLIER 1
-#define TWIST_SCROLL_DIVISOR 30
+#define TWIST_SCROLL_DIVISOR 20
 
 #define SNIPE_MULTIPLIER 1
 #define SNIPE_DIVISOR 4
@@ -221,6 +221,6 @@
 &zip_2s_mixer {
 	sync-scroll-report-ms = <8>;
 	twist-thres = <6>;
-	twist-interference-thres = <100>;
-	twist-interference-window = <96>;
+	twist-interference-thres = <150>;
+	twist-interference-window = <150>;
 };
