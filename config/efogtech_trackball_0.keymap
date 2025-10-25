@@ -19,6 +19,8 @@
 
 #define SCROLL_MULTIPLIER 1
 #define SCROLL_DIVISOR 40
+#define TWIST_SCROLL_MULTIPLIER 1
+#define TWIST_SCROLL_DIVISOR 40
 
 #define SNIPE_MULTIPLIER 1
 #define SNIPE_DIVISOR 4
@@ -95,7 +97,7 @@
 	};
 
 	trackball {
-		input-processors = <&zip_scroll_scaler 0 1>;
+		input-processors = <&zip_scroll_scaler TWIST_SCROLL_MULTIPLIER TWIST_SCROLL_DIVISOR>;
 
 		scroll {
 			layers = <LAYER_SCROLL>;
