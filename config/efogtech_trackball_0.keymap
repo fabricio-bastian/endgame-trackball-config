@@ -34,7 +34,7 @@
 				&kp LG(LS(M))                      &mkp MCLK
 				&ltmkp LAYER_EXTRAS LC(DOWN)       &mkp LCLK
 				&ltmkp LAYER_SCROLL LC(UP_ARROW) 	 &mkp RCLK
-				&ltm   LAYER_SNIPE MB4             &ltme LAYER_DEVICE MB5
+				&ltm   LAYER_SNIPE MB4             &ltm LAYER_DEVICE MB5
 			>;
 		};
 
