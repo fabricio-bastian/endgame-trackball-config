@@ -217,10 +217,3 @@
 		};
 	};
 };
-
-&zip_2s_mixer {
-	sync-scroll-report-ms = <8>;
-	twist-thres = <10>;
-	twist-interference-thres = <250>;
-	twist-interference-window = <96>;
-};
