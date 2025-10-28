@@ -1,4 +1,4 @@
- #include <behaviors.dtsi>
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -18,7 +18,9 @@
 #define LAYER_USER 5
 
 #define SCROLL_MULTIPLIER 1
-#define SCROLL_DIVISOR 3
+#define SCROLL_DIVISOR 40
+#define TWIST_SCROLL_MULTIPLIER 1
+#define TWIST_SCROLL_DIVISOR 20
 
 #define SNIPE_MULTIPLIER 1
 #define SNIPE_DIVISOR 4
@@ -29,29 +31,29 @@
 
 		default_layer {
 			display-name = "Default";
-			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LC(TAB) LC(LS(TAB))>;
+			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
 			bindings = <
-				&ltmkp LAYER_SNIPE ENTER  &ltmkp LAYER_SCROLL ESC
-				&mkp MCLK                 &kp DELETE
-				&mkp LCLK                 &mkp RCLK
-				&ltm LAYER_EXTRAS MB4     &ltm LAYER_DEVICE MB5
+				&kp LG(LS(M))                      &mkp MCLK
+				&ltmkp LAYER_EXTRAS LC(DOWN)       &mkp LCLK
+				&ltmkp LAYER_SCROLL LC(UP_ARROW) 	 &mkp RCLK
+				&ltm   LAYER_SNIPE MB4             &ltm LAYER_DEVICE MB5
 			>;
 		};
 
 		layer2 {
 			display-name = "Extras";
-			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LC(TAB) LC(LS(TAB))>;
+			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
 			bindings = <
-				&kp LC(C)   &kp LC(V)
-				&kp LC(X)   &kp LC(Z)
-				&kp LC(Z)   &kp LC(C)
-				&trans      &kp LC(V)
+				&kp LG(C)   &kp LG(V)
+				&trans      &kp LG(Z)
+				&kp LG(X)   &kp LG(C)
+				&kp LG(Z)   &kp LG(V)
 			>;
 		};
 
 		layer3 {
 			display-name = "Device";
-			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LC(TAB) LC(LS(TAB))>;
+			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
 			bindings = <
 				&rgb_off           &rgb_ug RGB_EFF
 				&bt BT_CLR         &bt BT_NXT
@@ -64,9 +66,9 @@
 			display-name = "Scroll";
 			sensor-bindings = <&rotenc_sens P2SM_DEC P2SM_INC &rotenc_scrlsens P2SM_INC P2SM_DEC>;
 			bindings = <
-			    &trans              &trans
+			    &trans              &rrl 1
 			    &trans              &scrlsens P2SM_INC 1
-			    &rrl 1              &scrlsens P2SM_DEC 1
+			    &trans              &scrlsens P2SM_DEC 1
 			    &sens P2SM_DEC 1    &sens P2SM_INC 1
 			>;
 		};
@@ -95,6 +97,8 @@
 	};
 
 	trackball {
+		input-processors = <&zip_scroll_scaler TWIST_SCROLL_MULTIPLIER TWIST_SCROLL_DIVISOR>;
+
 		scroll {
 			layers = <LAYER_SCROLL>;
 			input-processors = <&zip_xy_scaler SCROLL_MULTIPLIER SCROLL_DIVISOR>, <&zip_axis_clamper>,
