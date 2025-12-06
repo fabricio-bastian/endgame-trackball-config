@@ -37,10 +37,10 @@
 				&ltmkp LAYER_EXTRAS LC(DOWN)       &mkp LCLK
 				&ltmkp LAYER_SCROLL LC(UP_ARROW) 	 &mkp RCLK
 				&ltm   LAYER_SNIPE MB4             &ltm LAYER_DEVICE MB5
-				// rotary encoders
-				&kp C_VOL_UP              &kp LC(TAB)
-				&kp C_VOL_DN              &kp LC(LS(TAB))
 
+				// rotary encoders
+				&kp C_VOL_UP              &kp C_BRI_UP
+				&kp C_VOL_DN              &kp C_BRI_DN
 			>;
 		};
 
@@ -53,8 +53,8 @@
 				&kp LG(X)   &kp LG(C)
 				&kp LG(Z)   &kp LG(V)
 
-				&kp C_VOL_UP   &kp LC(TAB)
-				&kp C_VOL_DN   &kp LC(LS(TAB))
+				&kp C_VOL_UP   &kp C_BRI_UP
+				&kp C_VOL_DN   &kp C_BRI_DN
 			>;
 		};
 
@@ -67,8 +67,8 @@
 				&rgb_tog           &bt BT_PRV
 				&studio_unlock     &trans
 
-				&kp C_VOL_UP       &kp LC(TAB)
-				&kp C_VOL_DN       &kp LC(LS(TAB))
+				&kp C_VOL_UP       &kp C_BRI_UP
+				&kp C_VOL_DN       &kp C_BRI_DN
 			>;
 		};
 
@@ -76,10 +76,10 @@
 			display-name = "Scroll";
 			DECLARE_ENCODERS;
 			bindings = <
-			    &trans              &rrl 1
-			    &trans              &scrlsens P2SM_INC 1
-			    &trans              &scrlsens P2SM_DEC 1
-			    &sens P2SM_DEC 1    &sens P2SM_INC 1
+			  &trans              &rrl 1
+			  &trans              &scrlsens P2SM_INC 1
+			  &trans              &scrlsens P2SM_DEC 1
+			  &sens P2SM_DEC 1    &sens P2SM_INC 1
 
 				&sens P2SM_DEC 1    &scrlsens P2SM_INC 1
 				&sens P2SM_INC 1    &scrlsens P2SM_DEC 1
@@ -109,8 +109,8 @@
 				&trans        &trans
 				&trans        &trans
 
-				&kp C_VOL_UP  &kp LC(TAB)
-				&kp C_VOL_DN  &kp LC(LS(TAB))
+				&kp C_VOL_UP  &kp C_BRI_UP
+				&kp C_VOL_DN  &kp C_BRI_DN
 		    >;
 		};
 	};
