@@ -4,6 +4,8 @@ on:
     paths-ignore:
       - "mod/**"
   pull_request:
+    paths-ignore:
+      - "mod/**"
   workflow_dispatch:
 
 jobs:
